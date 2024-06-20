@@ -1,10 +1,7 @@
 {
-    "remarks": "ero-panel Frag✅",
-    "log": {
-        "loglevel": "warning"
-    },
     "dns": {
-        "hosts": {},
+        "hosts": {
+        },
         "servers": [
             "https://94.140.14.14/dns-query"
         ],
@@ -46,6 +43,17 @@
             "tag": "http-in"
         }
     ],
+    "log": {
+        "loglevel": "warning"
+    },
+    "observatory": {
+        "EnableConcurrency": true,
+        "probeInterval": "3m",
+        "probeURL": "https://api.github.com/_private/browser/stats",
+        "subjectSelector": [
+            "prox"
+        ]
+    },
     "outbounds": [
         {
             "protocol": "vless",
@@ -76,30 +84,299 @@
                 },
                 "tlsSettings": {
                     "allowInsecure": false,
-                    "fingerprint": "chrome",
                     "alpn": [
                         "h2",
                         "http/1.1"
                     ],
-                    "serverName": "ERO-pAnEl.PaGes.dEv"
+                    "fingerprint": "chrome",
+                    "serverName": "ERO-PANel.PAGES.dev"
                 },
                 "wsSettings": {
                     "headers": {
-                        "Host": "ERo-PaNel.pagEs.dev"
+                        "Host": "eRO-pANeL.paGEs.deV"
                     },
-                    "path": "/1iMcMg2cimgleusK?ed=2560"
+                    "path": "/5MHBYhIwttmnzQjF?ed=2560"
                 }
             },
-            "tag": "proxy"
+            "tag": "prox_1"
         },
         {
-            "tag": "fragment",
+            "protocol": "vless",
+            "settings": {
+                "vnext": [
+                    {
+                        "address": "www.speedtest.net",
+                        "port": 443,
+                        "users": [
+                            {
+                                "encryption": "none",
+                                "flow": "",
+                                "id": "89b3cbba-e6ac-485a-9481-976a0415eab9",
+                                "level": 8,
+                                "security": "auto"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "streamSettings": {
+                "network": "ws",
+                "security": "tls",
+                "sockopt": {
+                    "dialerProxy": "fragment",
+                    "tcpKeepAliveIdle": 100,
+                    "tcpNoDelay": true
+                },
+                "tlsSettings": {
+                    "allowInsecure": false,
+                    "alpn": [
+                        "h2",
+                        "http/1.1"
+                    ],
+                    "fingerprint": "chrome",
+                    "serverName": "ERo-panEl.PagES.Dev"
+                },
+                "wsSettings": {
+                    "headers": {
+                        "Host": "erO-paNeL.Pages.deV"
+                    },
+                    "path": "/8juwKH0VZVfrVIyG?ed=2560"
+                }
+            },
+            "tag": "prox_2"
+        },
+        {
+            "protocol": "vless",
+            "settings": {
+                "vnext": [
+                    {
+                        "address": "104.18.150.220",
+                        "port": 443,
+                        "users": [
+                            {
+                                "encryption": "none",
+                                "flow": "",
+                                "id": "89b3cbba-e6ac-485a-9481-976a0415eab9",
+                                "level": 8,
+                                "security": "auto"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "streamSettings": {
+                "network": "ws",
+                "security": "tls",
+                "sockopt": {
+                    "dialerProxy": "fragment",
+                    "tcpKeepAliveIdle": 100,
+                    "tcpNoDelay": true
+                },
+                "tlsSettings": {
+                    "allowInsecure": false,
+                    "alpn": [
+                        "h2",
+                        "http/1.1"
+                    ],
+                    "fingerprint": "chrome",
+                    "serverName": "eRO-paNEL.PaGEs.DeV"
+                },
+                "wsSettings": {
+                    "headers": {
+                        "Host": "ero-pAnEl.pAGES.dEv"
+                    },
+                    "path": "/HXCy9RVfHwpWZ50t?ed=2560"
+                }
+            },
+            "tag": "prox_3"
+        },
+        {
+            "protocol": "vless",
+            "settings": {
+                "vnext": [
+                    {
+                        "address": "172.66.44.89",
+                        "port": 443,
+                        "users": [
+                            {
+                                "encryption": "none",
+                                "flow": "",
+                                "id": "89b3cbba-e6ac-485a-9481-976a0415eab9",
+                                "level": 8,
+                                "security": "auto"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "streamSettings": {
+                "network": "ws",
+                "security": "tls",
+                "sockopt": {
+                    "dialerProxy": "fragment",
+                    "tcpKeepAliveIdle": 100,
+                    "tcpNoDelay": true
+                },
+                "tlsSettings": {
+                    "allowInsecure": false,
+                    "alpn": [
+                        "h2",
+                        "http/1.1"
+                    ],
+                    "fingerprint": "chrome",
+                    "serverName": "ERO-pAnEl.PaGeS.dEv"
+                },
+                "wsSettings": {
+                    "headers": {
+                        "Host": "ErO-PAneL.PaGeS.DEV"
+                    },
+                    "path": "/qC4eRvdrP61aXEXB?ed=2560"
+                }
+            },
+            "tag": "prox_4"
+        },
+        {
+            "protocol": "vless",
+            "settings": {
+                "vnext": [
+                    {
+                        "address": "172.66.47.167",
+                        "port": 443,
+                        "users": [
+                            {
+                                "encryption": "none",
+                                "flow": "",
+                                "id": "89b3cbba-e6ac-485a-9481-976a0415eab9",
+                                "level": 8,
+                                "security": "auto"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "streamSettings": {
+                "network": "ws",
+                "security": "tls",
+                "sockopt": {
+                    "dialerProxy": "fragment",
+                    "tcpKeepAliveIdle": 100,
+                    "tcpNoDelay": true
+                },
+                "tlsSettings": {
+                    "allowInsecure": false,
+                    "alpn": [
+                        "h2",
+                        "http/1.1"
+                    ],
+                    "fingerprint": "chrome",
+                    "serverName": "ErO-Panel.PageS.dEv"
+                },
+                "wsSettings": {
+                    "headers": {
+                        "Host": "erO-PANEL.PAgeS.dEV"
+                    },
+                    "path": "/82k6cPTfT2TDBrJm?ed=2560"
+                }
+            },
+            "tag": "prox_5"
+        },
+        {
+            "protocol": "vless",
+            "settings": {
+                "vnext": [
+                    {
+                        "address": "[2606:4700:310c::ac42:2c59]",
+                        "port": 443,
+                        "users": [
+                            {
+                                "encryption": "none",
+                                "flow": "",
+                                "id": "89b3cbba-e6ac-485a-9481-976a0415eab9",
+                                "level": 8,
+                                "security": "auto"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "streamSettings": {
+                "network": "ws",
+                "security": "tls",
+                "sockopt": {
+                    "dialerProxy": "fragment",
+                    "tcpKeepAliveIdle": 100,
+                    "tcpNoDelay": true
+                },
+                "tlsSettings": {
+                    "allowInsecure": false,
+                    "alpn": [
+                        "h2",
+                        "http/1.1"
+                    ],
+                    "fingerprint": "chrome",
+                    "serverName": "erO-paNeL.PAGES.dEV"
+                },
+                "wsSettings": {
+                    "headers": {
+                        "Host": "ERo-pANEL.pAGES.Dev"
+                    },
+                    "path": "/XhBQFosL64CV8oDL?ed=2560"
+                }
+            },
+            "tag": "prox_6"
+        },
+        {
+            "protocol": "vless",
+            "settings": {
+                "vnext": [
+                    {
+                        "address": "[2606:4700:310c::ac42:2fa7]",
+                        "port": 443,
+                        "users": [
+                            {
+                                "encryption": "none",
+                                "flow": "",
+                                "id": "89b3cbba-e6ac-485a-9481-976a0415eab9",
+                                "level": 8,
+                                "security": "auto"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "streamSettings": {
+                "network": "ws",
+                "security": "tls",
+                "sockopt": {
+                    "dialerProxy": "fragment",
+                    "tcpKeepAliveIdle": 100,
+                    "tcpNoDelay": true
+                },
+                "tlsSettings": {
+                    "allowInsecure": false,
+                    "alpn": [
+                        "h2",
+                        "http/1.1"
+                    ],
+                    "fingerprint": "chrome",
+                    "serverName": "ErO-PAnEl.paGeS.deV"
+                },
+                "wsSettings": {
+                    "headers": {
+                        "Host": "ERO-PaNEl.pAGEs.Dev"
+                    },
+                    "path": "/205SFzfgkK1HvOdp?ed=2560"
+                }
+            },
+            "tag": "prox_7"
+        },
+        {
             "protocol": "freedom",
             "settings": {
                 "fragment": {
-                    "packets": "tlshello",
+                    "interval": "5-10",
                     "length": "100-200",
-                    "interval": "5-10"
+                    "packets": "tlshello"
                 }
             },
             "streamSettings": {
@@ -107,7 +384,8 @@
                     "tcpKeepAliveIdle": 100,
                     "tcpNoDelay": true
                 }
-            }
+            },
+            "tag": "fragment"
         },
         {
             "protocol": "dns",
@@ -115,7 +393,8 @@
         },
         {
             "protocol": "freedom",
-            "settings": {},
+            "settings": {
+            },
             "tag": "direct"
         },
         {
@@ -138,11 +417,23 @@
             }
         },
         "system": {
-            "statsOutboundUplink": true,
-            "statsOutboundDownlink": true
+            "statsOutboundDownlink": true,
+            "statsOutboundUplink": true
         }
     },
+    "remarks": "💦 BPB Frag - Best Ping 💥",
     "routing": {
+        "balancers": [
+            {
+                "selector": [
+                    "prox"
+                ],
+                "strategy": {
+                    "type": "leastPing"
+                },
+                "tag": "all"
+            }
+        ],
         "domainStrategy": "IPIfNonMatch",
         "rules": [
             {
@@ -154,21 +445,22 @@
                 "type": "field"
             },
             {
+                "enabled": true,
                 "inboundTag": [
                     "socks-in",
                     "http-in"
                 ],
-                "type": "field",
-                "port": "53",
                 "outboundTag": "dns-out",
-                "enabled": true
+                "port": "53",
+                "type": "field"
             },
             {
-                "outboundTag": "proxy",
-                "type": "field",
-                "network": "tcp,udp"
+                "balancerTag": "all",
+                "network": "tcp,udp",
+                "type": "field"
             }
         ]
     },
-    "stats": {}
+    "stats": {
+    }
 }
