@@ -1,5 +1,5 @@
 {
-    "remarks": "💦 BPB Frag - ero-panel.pages...",
+    "remarks": "ero-panel Frag✅",
     "log": {
         "loglevel": "warning"
     },
