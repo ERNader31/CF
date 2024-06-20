@@ -1,1 +1,174 @@
-warp://auto/?ifp=5-10#ERwarp
+{
+    "remarks": "💦 BPB Frag - ero-panel.pages...",
+    "log": {
+        "loglevel": "warning"
+    },
+    "dns": {
+        "hosts": {},
+        "servers": [
+            "https://94.140.14.14/dns-query"
+        ],
+        "tag": "dns"
+    },
+    "inbounds": [
+        {
+            "port": 2080,
+            "protocol": "socks",
+            "settings": {
+                "auth": "noauth",
+                "udp": true,
+                "userLevel": 8
+            },
+            "sniffing": {
+                "destOverride": [
+                    "http",
+                    "tls"
+                ],
+                "enabled": true
+            },
+            "tag": "socks-in"
+        },
+        {
+            "port": 2081,
+            "protocol": "http",
+            "settings": {
+                "auth": "noauth",
+                "udp": true,
+                "userLevel": 8
+            },
+            "sniffing": {
+                "destOverride": [
+                    "http",
+                    "tls"
+                ],
+                "enabled": true
+            },
+            "tag": "http-in"
+        }
+    ],
+    "outbounds": [
+        {
+            "protocol": "vless",
+            "settings": {
+                "vnext": [
+                    {
+                        "address": "ero-panel.pages.dev",
+                        "port": 443,
+                        "users": [
+                            {
+                                "encryption": "none",
+                                "flow": "",
+                                "id": "89b3cbba-e6ac-485a-9481-976a0415eab9",
+                                "level": 8,
+                                "security": "auto"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "streamSettings": {
+                "network": "ws",
+                "security": "tls",
+                "sockopt": {
+                    "dialerProxy": "fragment",
+                    "tcpKeepAliveIdle": 100,
+                    "tcpNoDelay": true
+                },
+                "tlsSettings": {
+                    "allowInsecure": false,
+                    "fingerprint": "chrome",
+                    "alpn": [
+                        "h2",
+                        "http/1.1"
+                    ],
+                    "serverName": "ERO-pAnEl.PaGes.dEv"
+                },
+                "wsSettings": {
+                    "headers": {
+                        "Host": "ERo-PaNel.pagEs.dev"
+                    },
+                    "path": "/1iMcMg2cimgleusK?ed=2560"
+                }
+            },
+            "tag": "proxy"
+        },
+        {
+            "tag": "fragment",
+            "protocol": "freedom",
+            "settings": {
+                "fragment": {
+                    "packets": "tlshello",
+                    "length": "100-200",
+                    "interval": "5-10"
+                }
+            },
+            "streamSettings": {
+                "sockopt": {
+                    "tcpKeepAliveIdle": 100,
+                    "tcpNoDelay": true
+                }
+            }
+        },
+        {
+            "protocol": "dns",
+            "tag": "dns-out"
+        },
+        {
+            "protocol": "freedom",
+            "settings": {},
+            "tag": "direct"
+        },
+        {
+            "protocol": "blackhole",
+            "settings": {
+                "response": {
+                    "type": "http"
+                }
+            },
+            "tag": "block"
+        }
+    ],
+    "policy": {
+        "levels": {
+            "8": {
+                "connIdle": 300,
+                "downlinkOnly": 1,
+                "handshake": 4,
+                "uplinkOnly": 1
+            }
+        },
+        "system": {
+            "statsOutboundUplink": true,
+            "statsOutboundDownlink": true
+        }
+    },
+    "routing": {
+        "domainStrategy": "IPIfNonMatch",
+        "rules": [
+            {
+                "ip": [
+                    "8.8.8.8"
+                ],
+                "outboundTag": "direct",
+                "port": "53",
+                "type": "field"
+            },
+            {
+                "inboundTag": [
+                    "socks-in",
+                    "http-in"
+                ],
+                "type": "field",
+                "port": "53",
+                "outboundTag": "dns-out",
+                "enabled": true
+            },
+            {
+                "outboundTag": "proxy",
+                "type": "field",
+                "network": "tcp,udp"
+            }
+        ]
+    },
+    "stats": {}
+}
